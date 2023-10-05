@@ -1,9 +1,6 @@
-import { createApp } from "vue";
-import Home from "./views/Home.vue";
-import App from "./App.vue";
-import "./assets/tailwind.css";
 import { createRouter, createWebHistory } from "vue-router";
-import PageNotFound from "./components/PageNotFound.vue";
+import Home from "../views/Home.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 const routes = [
   {
@@ -24,4 +21,4 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).use(router).mount("#app");
+export default router;
