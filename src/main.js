@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import Home from "./views/Home.vue";
+import DashboardHome from "./views/Dashboard/DashboardHome.vue";
 import App from "./App.vue";
 import "./assets/tailwind.css";
 import { createRouter, createWebHistory } from "vue-router";
@@ -10,6 +11,12 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
+  },
+
+  {
+    path: "/dashboard",
+    name: "dashboardhome",
+    component: DashboardHome,
   },
 
   {
