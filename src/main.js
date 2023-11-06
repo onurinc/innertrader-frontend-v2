@@ -1,6 +1,9 @@
 import { createApp } from "vue";
 import Home from "./views/Home.vue";
 import DashboardHome from "./views/Dashboard/DashboardHome.vue";
+import Login from "./views/Auth/Login.vue";
+import Register from "./views/Auth/Register.vue";
+import Index from "./views/Blog/Index.vue";
 import App from "./App.vue";
 import "./assets/tailwind.css";
 import { createRouter, createWebHistory } from "vue-router";
@@ -17,6 +20,24 @@ const routes = [
     path: "/dashboard",
     name: "dashboardhome",
     component: DashboardHome,
+  },
+
+  {
+    path: "/blog",
+    name: "BlogIndex",
+    component: Index,
+  },
+
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
   },
 
   {

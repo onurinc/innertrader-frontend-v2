@@ -73,7 +73,8 @@
               type="submit"
               class="block w-full rounded-md border border-transparent bg-cyan-500 px-5 py-2 text-base font-medium text-white shadow hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 sm:px-5"
             >
-              Book a call
+              <a href=/dashboard class="text-m font-semibold leading-6 text-gray-900"
+              > Dashboard</a>
             </button>
           </div>
         </div>
@@ -134,9 +135,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "Blog", href: "/blog" },
   { name: "Dashboard", href: "/dashboard" },
-  { name: "Forum", href: "/forum" },
-  { name: "Economic calendar", href: "/news" },
 ];
 
 const mobileMenuOpen = ref(false);
