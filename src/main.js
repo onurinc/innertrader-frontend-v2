@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import Home from "./views/Home.vue";
 import DashboardHome from "./views/Dashboard/DashboardHome.vue";
-import Login from "./views/Auth/Login.vue";
-import Register from "./views/Auth/Register.vue";
+import LoginPage from "./views/Auth/LoginPage.vue";
+import RegisterPage from "./views/Auth/RegisterPage.vue";
 import Index from "./views/Blog/Index.vue";
 import App from "./App.vue";
 import "./assets/tailwind.css";
@@ -30,14 +30,14 @@ const routes = [
 
   {
     path: "/login",
-    name: "Login",
-    component: Login,
+    name: "LoginPage",
+    component: LoginPage,
   },
 
   {
     path: "/register",
-    name: "Register",
-    component: Register,
+    name: "RegisterPage",
+    component: RegisterPage,
   },
 
   {
