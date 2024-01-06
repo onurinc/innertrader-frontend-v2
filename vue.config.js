@@ -4,5 +4,5 @@ module.exports = defineConfig({
 });
 
 module.exports = {
-  publicPath: "/innertrader-frontend-v2/",
+  publicPath: "",
 };
