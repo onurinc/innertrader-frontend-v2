@@ -1,0 +1,33 @@
+name: build-and-deploy-to-vercel
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+# Run workflow on push to main or manual trigger
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  Build-and-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Get git functionality
+      - uses: actions/checkout@v3
+
+      # Install vercel commands for build
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      # Setup vercel environment
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Build app
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Deploy build files to vercel
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
